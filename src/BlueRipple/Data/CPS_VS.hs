@@ -54,7 +54,6 @@ import qualified BlueRipple.Data.CountFolds as BRCF
 
 import qualified Control.Foldl                 as FL
 import qualified Data.Text                     as T
-import Data.Type.Equality (type (~))
 import qualified Data.Vinyl                    as V
 import           Data.Vinyl.TypeLevel                     (type (++))
 import qualified Data.Vinyl.TypeLevel          as V
