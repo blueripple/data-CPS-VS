@@ -14,7 +14,7 @@ import qualified Frames.Streamly.ColumnUniverse         as FCU
 import qualified Language.Haskell.TH.Env as Env
 
 dataDir :: [Char]
-dataDir = fromMaybe "../bigData/IPUMS/" $ fmap toString $ $$(Env.envQ "BR_CPS_VS_DATA_DIR") >>= BRC.insureFinalSlash . toText
+dataDir = fromMaybe "../bigData/IPUMS/" $ fmap toString $ ($$(Env.envQ "BR_CPS_VS_DATA_DIR") :: Maybe String) >>= BRC.insureFinalSlash . toText
 
 cpsVoterPUMSCSV :: FilePath
 cpsVoterPUMSCSV = dataDir ++ "CPS_Voting_2006to2022.csv"
